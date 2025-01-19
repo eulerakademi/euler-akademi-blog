@@ -3,7 +3,21 @@
 import React from 'react';
 import Link from 'next/link';
 
-const blogPosts = [
+interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  date: string;
+}
+
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: React.ReactNode;
+}
+
+const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Matematik Öğrenmenin Püf Noktaları",
@@ -34,7 +48,7 @@ const blogPosts = [
   }
 ];
 
-const socialLinks = [
+const socialLinks: SocialLink[] = [
   { 
     name: 'Instagram',
     url: 'https://instagram.com/euler.akademi',
@@ -124,3 +138,4 @@ export default function Home() {
     </div>
   );
 }
+
